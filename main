@@ -1,0 +1,35 @@
+actor calculator {
+  var resVal: Int = 0;
+
+
+  public func sumVal(s: Int) : async Int {
+    resVal += s;
+    resVal
+  };
+
+  public func extVal(s: Int) : async Int {
+    resVal -= s;
+    resVal
+  };
+
+  public func multVal(s: Int) : async Int {
+    resVal *= s;
+    resVal
+  };
+
+  public func divVal(s: Int) : async ?Int {
+    if (s==0){
+      null
+    }else {
+      resVal /= s;
+      ?resVal
+    };
+  };
+  
+  public func clearval() : async(){
+    resVal := 0
+  };    
+
+
+  
+}
